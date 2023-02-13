@@ -26,7 +26,7 @@ class FileTypeController {
     lateinit var dbUri: String
 
     @GetMapping
-    fun getFileTypes() = mapOf(
+    fun getFileTypes(): Map<String, Any> = mapOf(
         "types" to fileTypes.split(","),
         "maxFileSize" to maxFileSize,
         "allowUpload" to allowUpload.toBoolean(),
