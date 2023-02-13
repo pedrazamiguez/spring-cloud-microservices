@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: "service-folder"
+  profiles:
+    active: "local"
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      profile: ${spring.profiles.active}
+
+server:
+  port: 33000
+
+---
+
+service-folder:
+  allowTrailingSlash: true

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: "server-configuration"
+  cloud:
+    config:
+      server:
+        git:
+          uri: "git@server-configuration:pedrazamiguez/config-repo.git"
+          force-pull: true
+          search-paths: "{application}"
+
+server:
+  port: 8888

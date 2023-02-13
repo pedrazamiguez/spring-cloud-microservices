@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: "service-file"
+  profiles:
+    active: "local"
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      profile: ${spring.profiles.active}
+
+server:
+  port: 32000
+
+---
+
+service-file:
+  types: "txt,bmp"
+  maxFileSize: "1g"
