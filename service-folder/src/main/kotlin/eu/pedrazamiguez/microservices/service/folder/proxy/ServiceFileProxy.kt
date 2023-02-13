@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 
-@FeignClient(name = "service-file", url = "localhost:32000")
+@FeignClient(name = "service-file")
 interface ServiceFileProxy {
 
     @GetMapping("/types")

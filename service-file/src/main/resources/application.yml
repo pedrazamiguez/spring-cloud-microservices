@@ -9,9 +9,6 @@ spring:
     config:
       profile: ${spring.profiles.active}
 
-server:
-  port: 32000
-
 ---
 
 service-file:

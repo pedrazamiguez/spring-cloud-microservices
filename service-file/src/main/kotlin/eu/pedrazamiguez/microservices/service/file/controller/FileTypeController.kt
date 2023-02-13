@@ -1,6 +1,8 @@
 package eu.pedrazamiguez.microservices.service.file.controller
 
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
@@ -11,19 +13,22 @@ import org.springframework.web.bind.annotation.RestController
 class FileTypeController {
 
     @Value("\${service-file.types:}")
-    lateinit var fileTypes: String
+    private lateinit var fileTypes: String
 
     @Value("\${service-file.maxFileSize:}")
-    lateinit var maxFileSize: String
+    private lateinit var maxFileSize: String
 
     @Value("\${service-file.allowUpload:}")
-    lateinit var allowUpload: String
+    private lateinit var allowUpload: String
 
     @Value("\${app.environment.displayName:}")
-    lateinit var environmentDisplayName: String
+    private lateinit var environmentDisplayName: String
 
     @Value("\${app.db.uri:}")
-    lateinit var dbUri: String
+    private lateinit var dbUri: String
+
+    @Autowired
+    private lateinit var webServerAppContext: ServletWebServerApplicationContext
 
     @GetMapping
     fun getFileTypes(): Map<String, Any> = mapOf(
@@ -31,7 +36,8 @@ class FileTypeController {
         "maxFileSize" to maxFileSize,
         "allowUpload" to allowUpload.toBoolean(),
         "env" to environmentDisplayName,
-        "dbUri" to dbUri
+        "dbUri" to dbUri,
+        "port" to webServerAppContext.webServer.port
     )
 
     @GetMapping("/{type}")
