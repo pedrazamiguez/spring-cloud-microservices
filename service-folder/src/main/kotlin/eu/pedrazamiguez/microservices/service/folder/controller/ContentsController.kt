@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/folders")
-class ListingController {
+@RequestMapping("/contents")
+class ContentsController {
 
     @Autowired
     private lateinit var serviceFileProxy: ServiceFileProxy
