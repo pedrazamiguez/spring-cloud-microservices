@@ -6,8 +6,12 @@ spring:
       server:
         git:
           uri: "git@server-configuration:pedrazamiguez/config-repo.git"
-          force-pull: true
-          search-paths: "{application}"
+          forcePull: true
+          defaultLabel: "main"
+          cloneOnStart: true
+          searchPaths:
+            - "shared"
+            - "{application}"
 
 server:
   port: 8888
