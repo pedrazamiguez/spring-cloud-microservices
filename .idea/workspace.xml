@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e2bf811b-546b-459e-89b2-f52102fa9c18" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-configuration/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server-configuration/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-authentication/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/service-authentication/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-file/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/service-file/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-file/src/main/kotlin/eu/pedrazamiguez/microservices/service/file/controller/FileTypeController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/service-file/src/main/kotlin/eu/pedrazamiguez/microservices/service/file/controller/FileTypeController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-folder/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/service-folder/build.gradle.kts" afterDir="false" />
@@ -103,7 +106,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.service-file">
+  <component name="RunManager" selected="Gradle.service-folder">
     <list>
       <item itemvalue="Gradle.api-gateway" />
       <item itemvalue="Gradle.server-configuration" />

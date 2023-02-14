@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext
 import org.springframework.http.HttpMethod
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
@@ -38,8 +39,8 @@ class FileTypeController {
 
     @GetMapping
     @Retry(name = "lazy", fallbackMethod = "getFileTypesFallback")
-    @CircuitBreaker(name = "default", fallbackMethod = "getFileTypesFallback")
-    @RateLimiter(name = "default")
+    //@CircuitBreaker(name = "default", fallbackMethod = "getFileTypesFallback")
+    @RateLimiter(name = "test")
     @Bulkhead(name = "default")
     fun getFileTypes(): Map<String, Any> {
         RestTemplate().exchange("http://dummy.xxx", HttpMethod.GET, null, String::class.java)

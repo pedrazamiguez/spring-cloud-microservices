@@ -19,14 +19,27 @@ repositories {
 extra["springCloudVersion"] = "2022.0.1"
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-actuator")
+
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
 	implementation("org.springframework.cloud:spring-cloud-starter-config")
 	implementation("org.springframework.cloud:spring-cloud-starter-gateway")
 	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	implementation("org.springframework.boot:spring-boot-starter-aop")
+	implementation("io.github.resilience4j:resilience4j-spring-boot3")
+
+	implementation("io.micrometer:micrometer-tracing-bridge-brave")
+	runtimeOnly("io.micrometer:micrometer-registry-prometheus")
+	implementation("io.zipkin.reporter2:zipkin-reporter-brave")
+
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("io.micrometer:micrometer-observation-test")
+
 }
 
 dependencyManagement {
