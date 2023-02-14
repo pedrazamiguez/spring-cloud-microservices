@@ -1,5 +1,8 @@
 package eu.pedrazamiguez.microservices.service.file.controller
 
+import io.github.resilience4j.bulkhead.annotation.Bulkhead
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter
 import io.github.resilience4j.retry.annotation.Retry
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
@@ -35,6 +38,9 @@ class FileTypeController {
 
     @GetMapping
     @Retry(name = "lazy", fallbackMethod = "getFileTypesFallback")
+    @CircuitBreaker(name = "default", fallbackMethod = "getFileTypesFallback")
+    @RateLimiter(name = "default")
+    @Bulkhead(name = "default")
     fun getFileTypes(): Map<String, Any> {
         RestTemplate().exchange("http://dummy.xxx", HttpMethod.GET, null, String::class.java)
         return mapOf(
