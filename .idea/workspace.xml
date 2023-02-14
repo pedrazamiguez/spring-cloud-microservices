@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2bf811b-546b-459e-89b2-f52102fa9c18" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/api_gateway.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/kotlin/eu/pedrazamiguez/microservices/api/gateway/ApiGatewayApplication.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/test/kotlin/eu/pedrazamiguez/microservices/api/gateway/ApiGatewayApplicationTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/kotlin/eu/pedrazamiguez/microservices/api/gateway/filter/ExchangeLoggingFilter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-discovery/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-discovery/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-file/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-file/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-folder/src/main/kotlin/eu/pedrazamiguez/microservices/service/folder/controller/ListingController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/service-folder/src/main/kotlin/eu/pedrazamiguez/microservices/service/folder/controller/ContentsController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-folder/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-folder/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +99,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.service-folder">
+  <component name="RunManager" selected="Gradle.api-gateway">
     <list>
       <item itemvalue="Gradle.api-gateway" />
       <item itemvalue="Gradle.server-configuration" />
