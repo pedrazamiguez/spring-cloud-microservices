@@ -2,7 +2,7 @@ spring:
   application:
     name: "server-configuration"
   profiles:
-    active: "local"
+    active: "${SCM_ENV:local}"
   cloud:
     config:
       server:

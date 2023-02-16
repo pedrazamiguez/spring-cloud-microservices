@@ -43,7 +43,7 @@ class FileTypeController {
     @RateLimiter(name = "test")
     @Bulkhead(name = "default")
     fun getFileTypes(): Map<String, Any> {
-        RestTemplate().exchange("http://dummy.xxx", HttpMethod.GET, null, String::class.java)
+        //RestTemplate().exchange("http://dummy.xxx", HttpMethod.GET, null, String::class.java)
         return mapOf(
             "types" to fileTypes.split(","),
             "maxFileSize" to maxFileSize,

@@ -2,7 +2,7 @@ spring:
   application:
     name: "server-discovery"
   profiles:
-    active: "local"
+    active: "${SCM_ENV:local}"
 
 server:
   port: 8761

@@ -33,8 +33,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-aop")
     implementation("io.github.resilience4j:resilience4j-spring-boot3")
 
+    implementation("io.micrometer:micrometer-observation")
     implementation("io.micrometer:micrometer-tracing-bridge-brave")
-    runtimeOnly("io.micrometer:micrometer-registry-prometheus")
+    implementation("io.github.openfeign:feign-micrometer")
     implementation("io.zipkin.reporter2:zipkin-reporter-brave")
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
