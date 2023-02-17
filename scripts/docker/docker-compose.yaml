@@ -1,0 +1,123 @@
+version: "3.9"
+
+services:
+
+  server-discovery:
+    container_name: server-discovery
+    image: apedraza/server-discovery
+    pull_policy: always
+    ports:
+      - "8761:8761"
+    networks:
+      scm-network:
+        aliases:
+          - "server-discovery"
+    restart: always
+
+  server-configuration:
+    container_name: server-configuration
+    image: apedraza/server-configuration
+    pull_policy: always
+    ports:
+      - "8888:8888"
+    networks:
+      scm-network:
+        aliases:
+          - "server-configuration"
+    volumes:
+      - ${SCM_CONFIG_REPO_LOCAL}:${SCM_CONFIG_REPO_CONTAINER}:ro
+    environment:
+      - SPRING_PROFILES_ACTIVE=${SCM_PROFILE}
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=${SCM_SERVER_DISCOVERY}
+      - SPRING_CLOUD_CONFIG_SERVER_GIT_URI=${SCM_CONFIG_REPO_CONTAINER}
+    restart: always
+    depends_on:
+      server-discovery:
+        condition: service_healthy
+
+  server-zipkin:
+    container_name: server-zipkin
+    image: openzipkin/zipkin
+    pull_policy: always
+    ports:
+      - "9411:9411"
+    networks:
+      scm-network:
+        aliases:
+          - "server-zipkin"
+    restart: always
+    depends_on:
+      server-discovery:
+        condition: service_healthy
+      server-configuration:
+        condition: service_healthy
+
+  api-gateway:
+    container_name: api-gateway
+    image: apedraza/api-gateway
+    pull_policy: always
+    ports:
+      - "9999:8765"
+    networks:
+      scm-network:
+        aliases:
+          - "api-gateway"
+    environment:
+      - SPRING_PROFILES_ACTIVE=${SCM_PROFILE}
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=${SCM_SERVER_DISCOVERY}
+      - SPRING.CONFIG.IMPORT=configserver:${SCM_SERVER_CONFIGURATION}
+      - SPRING_ZIPKIN_BASEURL=${SCM_ZIPKIN_BASEURL}
+    restart: always
+    depends_on:
+      server-discovery:
+        condition: service_healthy
+      server-configuration:
+        condition: service_healthy
+      server-zipkin:
+        condition: service_healthy
+
+  service-file:
+    image: apedraza/service-file
+    pull_policy: always
+    networks:
+      scm-network:
+        aliases:
+          - "service-file"
+    environment:
+      - SPRING_PROFILES_ACTIVE=${SCM_PROFILE}
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=${SCM_SERVER_DISCOVERY}
+      - SPRING_CONFIG_IMPORT=configserver:${SCM_SERVER_CONFIGURATION}
+      - SPRING_ZIPKIN_BASEURL=${SCM_ZIPKIN_BASEURL}
+    restart: always
+    depends_on:
+      server-discovery:
+        condition: service_healthy
+      server-configuration:
+        condition: service_healthy
+      server-zipkin:
+        condition: service_healthy
+
+  service-folder:
+    image: apedraza/service-folder
+    pull_policy: always
+    networks:
+      scm-network:
+        aliases:
+          - "service-folder"
+    environment:
+      - SPRING_PROFILES_ACTIVE=${SCM_PROFILE}
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=${SCM_SERVER_DISCOVERY}
+      - SPRING_CONFIG_IMPORT=configserver:${SCM_SERVER_CONFIGURATION}
+      - SPRING_ZIPKIN_BASEURL=${SCM_ZIPKIN_BASEURL}
+    restart: always
+    depends_on:
+      server-discovery:
+        condition: service_healthy
+      server-configuration:
+        condition: service_healthy
+      server-zipkin:
+        condition: service_healthy
+
+networks:
+  scm-network:
+    driver: bridge

@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2bf811b-546b-459e-89b2-f52102fa9c18" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/docker/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/docker/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-configuration/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server-configuration/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-configuration/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-configuration/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-discovery/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-discovery/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-authentication/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/service-authentication/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-file/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/service-file/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-file/src/main/kotlin/eu/pedrazamiguez/microservices/service/file/controller/FileTypeController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/service-file/src/main/kotlin/eu/pedrazamiguez/microservices/service/file/controller/FileTypeController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-folder/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/service-folder/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-navigation/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/service-navigation/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-search/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/service-search/build.gradle.kts" afterDir="false" />
@@ -124,7 +122,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/pedrazamiguez/Projects/spring-cloud-microservices/server-configuration/src/main/resources",
+    "last_opened_file_path": "/Users/pedrazamiguez/Projects/spring-cloud-microservices/scripts/docker",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -132,6 +130,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts/docker" />
       <recent name="$PROJECT_DIR$/server-configuration/src/main/resources" />
     </key>
   </component>
@@ -154,6 +153,9 @@
       <updated>1676273334942</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

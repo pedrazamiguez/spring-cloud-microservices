@@ -35,6 +35,7 @@ dependencies {
 	implementation("io.micrometer:micrometer-observation")
 	implementation("io.micrometer:micrometer-tracing-bridge-brave")
 	implementation("io.zipkin.reporter2:zipkin-reporter-brave")
+	implementation("org.springframework.amqp:spring-rabbit")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
