@@ -12,7 +12,34 @@ services:
       scm-network:
         aliases:
           - "server-discovery"
+    healthcheck:
+      test: "curl --fail --silent localhost:8761/actuator/health/readiness | grep UP || exit 1"
+      interval: 2s
+      timeout: 3s
+      retries: 5
+      start_period: 2s
     restart: always
+
+  server-zipkin:
+    container_name: server-zipkin
+    image: openzipkin/zipkin
+    pull_policy: always
+    ports:
+      - "9411:9411"
+    networks:
+      scm-network:
+        aliases:
+          - "server-zipkin"
+    healthcheck:
+      test: "curl --fail --silent localhost:9411/health | grep UP || exit 1"
+      interval: 2s
+      timeout: 3s
+      retries: 5
+      start_period: 2s
+    restart: always
+    depends_on:
+      server-discovery:
+        condition: service_healthy
 
   server-configuration:
     container_name: server-configuration
@@ -30,26 +57,18 @@ services:
       - SPRING_PROFILES_ACTIVE=${SCM_PROFILE}
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=${SCM_SERVER_DISCOVERY}
       - SPRING_CLOUD_CONFIG_SERVER_GIT_URI=${SCM_CONFIG_REPO_CONTAINER}
+      - SPRING_ZIPKIN_BASEURL=${SCM_ZIPKIN_BASEURL}
+    healthcheck:
+      test: "curl --fail --silent localhost:8888/actuator/health/readiness | grep UP || exit 1"
+      interval: 2s
+      timeout: 3s
+      retries: 5
+      start_period: 2s
     restart: always
     depends_on:
       server-discovery:
         condition: service_healthy
-
-  server-zipkin:
-    container_name: server-zipkin
-    image: openzipkin/zipkin
-    pull_policy: always
-    ports:
-      - "9411:9411"
-    networks:
-      scm-network:
-        aliases:
-          - "server-zipkin"
-    restart: always
-    depends_on:
-      server-discovery:
-        condition: service_healthy
-      server-configuration:
+      server-zipkin:
         condition: service_healthy
 
   api-gateway:
@@ -67,6 +86,12 @@ services:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=${SCM_SERVER_DISCOVERY}
       - SPRING.CONFIG.IMPORT=configserver:${SCM_SERVER_CONFIGURATION}
       - SPRING_ZIPKIN_BASEURL=${SCM_ZIPKIN_BASEURL}
+    healthcheck:
+      test: "curl --fail --silent localhost:8765/actuator/health/readiness | grep UP || exit 1"
+      interval: 2s
+      timeout: 3s
+      retries: 5
+      start_period: 2s
     restart: always
     depends_on:
       server-discovery:

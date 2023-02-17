@@ -8,6 +8,7 @@ spring:
   cloud:
     config:
       profile: ${spring.profiles.active}
+      fail-fast: true
 
 ---
 

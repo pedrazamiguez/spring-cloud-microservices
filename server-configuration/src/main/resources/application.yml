@@ -26,3 +26,29 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${SCM_SERVER_DISCOVERY:http://localhost:8761/eureka}
+
+management:
+  info:
+    env:
+      enabled: true
+    build:
+      enabled: true
+    git:
+      enabled: true
+    java:
+      enabled: true
+    os:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "info,health,refresh"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
