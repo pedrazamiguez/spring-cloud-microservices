@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="17">
+      <module name="api-gateway" target="17" />
+      <module name="api-gateway.main" target="17" />
+      <module name="api-gateway.test" target="17" />
+      <module name="server-configuration" target="17" />
+      <module name="server-configuration.main" target="17" />
+      <module name="server-configuration.test" target="17" />
+      <module name="server-discovery" target="17" />
+      <module name="server-discovery.main" target="17" />
+      <module name="server-discovery.test" target="17" />
+      <module name="service-authentication" target="17" />
+      <module name="service-authentication.main" target="17" />
+      <module name="service-authentication.test" target="17" />
+      <module name="service-file.main" target="17" />
+      <module name="service-file.test" target="17" />
+      <module name="service-folder" target="17" />
+      <module name="service-folder.main" target="17" />
+      <module name="service-folder.test" target="17" />
+      <module name="service-navigation" target="17" />
+      <module name="service-navigation.main" target="17" />
+      <module name="service-navigation.test" target="17" />
+      <module name="service-search" target="17" />
+      <module name="service-search.main" target="17" />
+      <module name="service-search.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

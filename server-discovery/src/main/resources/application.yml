@@ -3,6 +3,9 @@ spring:
     name: "server-discovery"
   profiles:
     active: "${SCM_ENV:local}"
+  cloud:
+    config:
+      enabled: false
 
 server:
   port: 8761

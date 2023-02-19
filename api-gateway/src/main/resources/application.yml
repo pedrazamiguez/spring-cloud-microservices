@@ -9,3 +9,5 @@ spring:
     config:
       profile: ${spring.profiles.active}
       fail-fast: true
+  main:
+    web-application-type: reactive

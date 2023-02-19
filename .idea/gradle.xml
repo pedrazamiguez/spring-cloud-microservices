@@ -5,80 +5,18 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="17" />
         <option name="modules">
           <set>
+            <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/api-gateway" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/server-configuration" />
-        <option name="gradleJvm" value="17" />
-        <option name="modules">
-          <set>
             <option value="$PROJECT_DIR$/server-configuration" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/server-discovery" />
-        <option name="gradleJvm" value="17" />
-        <option name="modules">
-          <set>
             <option value="$PROJECT_DIR$/server-discovery" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/service-authentication" />
-        <option name="gradleJvm" value="17" />
-        <option name="modules">
-          <set>
             <option value="$PROJECT_DIR$/service-authentication" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/service-file" />
-        <option name="gradleJvm" value="17" />
-        <option name="modules">
-          <set>
             <option value="$PROJECT_DIR$/service-file" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/service-folder" />
-        <option name="gradleJvm" value="17" />
-        <option name="modules">
-          <set>
             <option value="$PROJECT_DIR$/service-folder" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/service-navigation" />
-        <option name="gradleJvm" value="17" />
-        <option name="modules">
-          <set>
             <option value="$PROJECT_DIR$/service-navigation" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/service-search" />
-        <option name="gradleJvm" value="17" />
-        <option name="modules">
-          <set>
             <option value="$PROJECT_DIR$/service-search" />
           </set>
         </option>
