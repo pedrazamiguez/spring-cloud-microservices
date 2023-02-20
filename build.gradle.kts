@@ -90,6 +90,7 @@ subprojects {
     }
 
     tasks.withType<BootBuildImage> {
+        builder.set("paketobuildpacks/builder:full")
         imageName.set("apedraza/${project.name}:latest")
         publish.set(true)
         docker {

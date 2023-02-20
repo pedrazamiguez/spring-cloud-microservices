@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2bf811b-546b-459e-89b2-f52102fa9c18" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/service_folder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/service_folder.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-configuration/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server-configuration/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-discovery/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server-discovery/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-folder/src/main/kotlin/eu/pedrazamiguez/microservices/service/folder/ServiceFolderApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/service-folder/src/main/kotlin/eu/pedrazamiguez/microservices/service/folder/ServiceFolderApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/docker/.env" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/docker/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/docker/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/docker/docker-compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
