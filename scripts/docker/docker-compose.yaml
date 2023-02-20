@@ -31,7 +31,7 @@ services:
         aliases:
           - "server-zipkin"
     healthcheck:
-      test: "curl --fail --silent localhost:9411/health | grep UP || exit 1"
+      test: "wget --no-verbose --tries=1 --spider http://localhost:9411 || exit 1"
       interval: 2s
       timeout: 3s
       retries: 5
@@ -76,7 +76,7 @@ services:
     image: apedraza/api-gateway
     pull_policy: always
     ports:
-      - "9999:8765"
+      - "8765:8765"
     networks:
       scm-network:
         aliases:
@@ -84,7 +84,7 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=${SCM_PROFILE}
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=${SCM_SERVER_DISCOVERY}
-      - SPRING.CONFIG.IMPORT=configserver:${SCM_SERVER_CONFIGURATION}
+      - SPRING_CONFIG_IMPORT=configserver:${SCM_SERVER_CONFIGURATION}
       - SPRING_ZIPKIN_BASEURL=${SCM_ZIPKIN_BASEURL}
     healthcheck:
       test: "curl --fail --silent localhost:8765/actuator/health/readiness | grep UP || exit 1"
