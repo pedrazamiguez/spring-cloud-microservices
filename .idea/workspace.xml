@@ -5,64 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2bf811b-546b-459e-89b2-f52102fa9c18" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/api_gateway.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/api_gateway.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/server_configuration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/server_configuration.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/server_discovery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/server_discovery.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/service_file.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/service_file.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/service_folder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/service_folder.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spring-cloud-microservices.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-configuration/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server-configuration/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-configuration/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-configuration/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-configuration/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-configuration/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-discovery/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-discovery/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-discovery/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-discovery/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-discovery/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-discovery/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server-discovery/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-authentication/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-authentication/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-authentication/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-authentication/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-authentication/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-file/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-file/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/service-file/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-file/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-file/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-file/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-file/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-folder/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-folder/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-folder/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-folder/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-folder/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-navigation/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-navigation/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-navigation/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-navigation/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-navigation/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-search/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-search/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-search/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-search/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-search/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-discovery/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/server-discovery/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-folder/src/main/kotlin/eu/pedrazamiguez/microservices/service/folder/ServiceFolderApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/service-folder/src/main/kotlin/eu/pedrazamiguez/microservices/service/folder/ServiceFolderApplication.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

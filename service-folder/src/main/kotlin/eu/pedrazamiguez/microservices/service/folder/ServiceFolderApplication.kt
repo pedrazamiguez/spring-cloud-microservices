@@ -9,5 +9,5 @@ import org.springframework.cloud.openfeign.EnableFeignClients
 class ServiceFolderApplication
 
 fun main(args: Array<String>) {
-	runApplication<ServiceFolderApplication>(*args)
+    runApplication<ServiceFolderApplication>(*args)
 }

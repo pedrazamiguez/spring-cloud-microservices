@@ -33,6 +33,7 @@ subprojects {
     }
 
     extra["springCloudVersion"] = "2022.0.1"
+    extra["springContextIndexerVersion"] = "6.0.5"
 
     val implementation by configurations
     val developmentOnly by configurations
@@ -44,7 +45,10 @@ subprojects {
         implementation(kotlin("reflect"))
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
-        implementation("org.springframework.boot:spring-boot-starter-web")
+        implementation("org.springframework.boot:spring-boot-starter-web") {
+            exclude(module = "spring-boot-starter-tomcat")
+        }
+        implementation("org.springframework.boot:spring-boot-starter-undertow")
 
         implementation("org.springframework.cloud:spring-cloud-starter-config")
         implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
@@ -59,6 +63,8 @@ subprojects {
         implementation("io.github.openfeign:feign-micrometer")
         implementation("io.zipkin.reporter2:zipkin-reporter-brave")
         implementation("org.springframework.amqp:spring-rabbit")
+
+        annotationProcessor("org.springframework:spring-context-indexer:${property("springContextIndexerVersion")}")
 
         developmentOnly("org.springframework.boot:spring-boot-devtools")
         testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -85,7 +91,7 @@ subprojects {
 
     tasks.withType<BootBuildImage> {
         imageName.set("apedraza/${project.name}:latest")
-        publish.set(false)
+        publish.set(true)
         docker {
             publishRegistry {
                 username.set("apedraza")

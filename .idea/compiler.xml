@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context-indexer/6.0.5/a87497b6e2e764f085681cad9f053a232d0bcc68/spring-context-indexer-6.0.5.jar" />
+        </processorPath>
+        <module name="spring-cloud-microservices.service-file.main" />
+        <module name="spring-cloud-microservices.server-configuration.main" />
+        <module name="spring-cloud-microservices.service-authentication.main" />
+        <module name="spring-cloud-microservices.service-folder.main" />
+        <module name="spring-cloud-microservices.service-navigation.main" />
+        <module name="spring-cloud-microservices.service-search.main" />
+        <module name="spring-cloud-microservices.api-gateway.main" />
+        <module name="spring-cloud-microservices.server-discovery.main" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel target="17">
       <module name="api-gateway" target="17" />
       <module name="api-gateway.main" target="17" />
