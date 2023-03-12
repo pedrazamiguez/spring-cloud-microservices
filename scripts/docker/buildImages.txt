@@ -1,0 +1,5 @@
+docker build -t apedraza/server-discovery --target server-discovery . && \
+docker build -t apedraza/server-configuration --target server-configuration . && \
+docker build -t apedraza/api-gateway --target api-gateway . && \
+docker build -t apedraza/service-file --target service-file . && \
+docker build -t apedraza/service-folder --target service-folder .

@@ -5,7 +5,6 @@ services:
   server-discovery:
     container_name: server-discovery
     image: apedraza/server-discovery
-    pull_policy: always
     ports:
       - "8761:8761"
     networks:
@@ -23,7 +22,6 @@ services:
   server-zipkin:
     container_name: server-zipkin
     image: openzipkin/zipkin
-    pull_policy: always
     ports:
       - "9411:9411"
     networks:
@@ -44,7 +42,6 @@ services:
   server-configuration:
     container_name: server-configuration
     image: apedraza/server-configuration
-    pull_policy: always
     ports:
       - "8888:8888"
     networks:
@@ -54,7 +51,7 @@ services:
     volumes:
       - ${SCM_CONFIG_REPO_LOCAL}:${SCM_CONFIG_REPO_CONTAINER}:ro
     environment:
-      - SPRING_PROFILES_ACTIVE=${SCM_PROFILE}
+      - SPRING_PROFILES_ACTIVE=native
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=${SCM_SERVER_DISCOVERY}
       - SPRING_CLOUD_CONFIG_SERVER_GIT_URI=${SCM_CONFIG_REPO_CONTAINER}
       - SPRING_ZIPKIN_BASEURL=${SCM_ZIPKIN_BASEURL}
@@ -74,7 +71,6 @@ services:
   api-gateway:
     container_name: api-gateway
     image: apedraza/api-gateway
-    pull_policy: always
     ports:
       - "8765:8765"
     networks:
@@ -103,7 +99,6 @@ services:
 
   service-file:
     image: apedraza/service-file
-    pull_policy: always
     networks:
       scm-network:
         aliases:
@@ -124,7 +119,6 @@ services:
 
   service-folder:
     image: apedraza/service-folder
-    pull_policy: always
     networks:
       scm-network:
         aliases:

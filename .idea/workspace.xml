@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2bf811b-546b-459e-89b2-f52102fa9c18" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/service_folder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/service_folder.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/docker/buildImages.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/docker/.env" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/docker/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/docker/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/docker/docker-compose.yaml" afterDir="false" />
     </list>
@@ -111,7 +112,8 @@
     &quot;last_opened_file_path&quot;: &quot;/Users/pedrazamiguez/Projects/spring-cloud-microservices/scripts/docker&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -119,15 +121,57 @@
       <recent name="$PROJECT_DIR$/scripts/docker" />
       <recent name="$PROJECT_DIR$/server-configuration/src/main/resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/server-discovery" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.service-folder">
+  <component name="RunManager" selected="Docker.Dockerfile server-configuration">
+    <configuration name="Dockerfile server-configuration" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="arm64v8eclipse-temurin17-jdk-jammy_server-configuration" />
+          <option name="buildCliOptions" value="--target server-configuration" />
+          <option name="buildKitEnabled" value="true" />
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Dockerfile: Compose Deployment" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="eclipse-temurin17-jdk-alpine_build" />
+          <option name="buildCliOptions" value="--target build" />
+          <option name="buildKitEnabled" value="true" />
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.Dockerfile server-configuration" />
+      <item itemvalue="Docker.server-discovery/Dockerfile: Compose Deployment" />
       <item itemvalue="Gradle.api-gateway" />
       <item itemvalue="Gradle.server-configuration" />
       <item itemvalue="Gradle.server-discovery" />
       <item itemvalue="Gradle.service-file" />
       <item itemvalue="Gradle.service-folder" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Dockerfile server-configuration" />
+        <item itemvalue="Docker.server-discovery/Dockerfile: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
