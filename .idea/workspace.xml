@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2bf811b-546b-459e-89b2-f52102fa9c18" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/docker/buildImages.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/docker/.env" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/docker/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/docker/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/docker/docker-compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +122,7 @@
       <recent name="$PROJECT_DIR$/server-discovery" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile server-configuration">
+  <component name="RunManager" selected="Gradle.service-file">
     <configuration name="Dockerfile server-configuration" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -158,8 +154,8 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.Dockerfile: Compose Deployment" />
       <item itemvalue="Docker.Dockerfile server-configuration" />
-      <item itemvalue="Docker.server-discovery/Dockerfile: Compose Deployment" />
       <item itemvalue="Gradle.api-gateway" />
       <item itemvalue="Gradle.server-configuration" />
       <item itemvalue="Gradle.server-discovery" />
@@ -169,7 +165,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.Dockerfile server-configuration" />
-        <item itemvalue="Docker.server-discovery/Dockerfile: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>

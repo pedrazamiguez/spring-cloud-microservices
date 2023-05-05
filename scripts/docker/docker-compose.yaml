@@ -51,10 +51,10 @@ services:
     volumes:
       - ${SCM_CONFIG_REPO_LOCAL}:${SCM_CONFIG_REPO_CONTAINER}:ro
     environment:
-      - SPRING_PROFILES_ACTIVE=native
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=${SCM_SERVER_DISCOVERY}
-      - SPRING_CLOUD_CONFIG_SERVER_GIT_URI=${SCM_CONFIG_REPO_CONTAINER}
-      - SPRING_ZIPKIN_BASEURL=${SCM_ZIPKIN_BASEURL}
+      - spring.profiles.active=native
+      - eureka.client.service-url.defaultZone=${SCM_SERVER_DISCOVERY}
+      - spring.cloud.config.server.git.uri=file://${SCM_CONFIG_REPO_CONTAINER}
+      - SCM_ZIPKIN_BASEURL=${SCM_ZIPKIN_BASEURL}
     healthcheck:
       test: "curl --fail --silent localhost:8888/actuator/health/readiness | grep UP || exit 1"
       interval: 2s
@@ -78,10 +78,10 @@ services:
         aliases:
           - "api-gateway"
     environment:
-      - SPRING_PROFILES_ACTIVE=${SCM_PROFILE}
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=${SCM_SERVER_DISCOVERY}
-      - SPRING_CONFIG_IMPORT=configserver:${SCM_SERVER_CONFIGURATION}
-      - SPRING_ZIPKIN_BASEURL=${SCM_ZIPKIN_BASEURL}
+      - spring.profiles.active=${SCM_PROFILE}
+      - eureka.client.service-url.defaultZone=${SCM_SERVER_DISCOVERY}
+      - spring.config.import=configserver:${SCM_SERVER_CONFIGURATION}
+      - spring.zipkin.baseUrl=${SCM_ZIPKIN_BASEURL}
     healthcheck:
       test: "curl --fail --silent localhost:8765/actuator/health/readiness | grep UP || exit 1"
       interval: 2s
